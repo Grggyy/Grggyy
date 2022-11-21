@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- create registration form -->
+    <form>
+      <h1>Registration Form</h1>
+      <label for="userId">
+        User Id:
+        <input
+          type="text"
+          name="userId"
+          id="userId"
+          placeholder="Enter your user id"
+          required
+          minlength="5"
+          maxlength="12"
+        />
+      </label>
+
+      <label for="password">
+        Password:
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+          minlength="7"
+          maxlength="12"
+        />
+      </label>
+
+      <label for="name">
+        Name:
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your name"
+          required
+          onkeydown="return /[a-z]/i.test(event.key)"
+        />
+        <!-- only alphabets -->
+      </label>
+
+      <label for="address">
+        Address:
+        <input
+          type="text"
+          name="address"
+          id="address"
+          placeholder="Enter your address"
+        />
+      </label>
+
+      <label for="municipality" required>
+        Municipality:
+        <!-- select -->
+        <select name="municipality" id="municipality" required>
+          <option value="#" selected disabled>Select your municipality</option>
+          <option value="Kathmandu">Dasmariñas</option>
+          <option value="Lalitpur">Imus</option>
+          <option value="Bhaktapur">Trece Martires</option>
+          <option value="Bhaktapur">Silang</option>
+          <option value="Bhaktapur">Gen. Tri.</option>
+          <option value="Bhaktapur">Tagaytay</option>
+        </select>
+      </label>
+
+      <label for="zipCode">
+        Zip Code:
+        <input
+          type="text"
+          name="zipCode"
+          id="zipCode"
+          placeholder="Enter your zip code"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+          required
+        />
+      </label>
+
+      <label for="email">
+        Email:
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+      </label>
+
+      <label for="sex"
+        >Sex:
+        <label for="male">
+          <input type="radio" name="sex" id="male" checked required/>
+          Male
+        </label>
+        <label for="female">
+          <input type="radio" name="sex" id="female" required/>
+          Female
+        </label>
+      </label>
+
+      <label for="language" required
+        >Language:
+        <label for="English">
+          <input type="checkbox" name="language" id="English" checked />
+          English
+        </label>
+        <label for="French">
+          <input type="checkbox" name="language" id="French" />
+          French
+        </label>
+      </label>
+
+      <label for="about">
+        About:
+        <textarea
+          class="about"
+          id="about2"
+          name="about"
+          id="about"
+          cols="30"
+          rows="10"
+          placeholder="Enter your about"
+        ></textarea>
+      </label>
+
+      <input id="submit-btn" type="submit" value="Submit" />
+    </form>
+  </body>
+  <script src="./script.js"></script>
+</html>

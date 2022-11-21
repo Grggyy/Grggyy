@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;800&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c3c3c3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+form {
+  margin: 5rem auto;
+  width: fit-content;
+  padding: 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 2rem;
+}
+
+form h1 {
+  margin-bottom: 1rem;
+}
+
+form label {
+  margin-bottom: 1rem;
+  text-align: end;
+  margin-right: 2rem;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"], 
+form select,
+form textarea,
+form input[type="radio"],
+form input[type="checkbox"] {
+  padding: 0.3rem 1rem;
+  margin-left: 0.5rem;
+}
+
+form input[type="submit"] {
+  margin: 1rem auto;
+  padding: 0.5rem 1.5rem;
+  background-color: rgb(64, 102, 207);
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  opacity: 0.5;
+}
+
