@@ -15,5 +15,12 @@ function alphaOnly(event) {
 
 const submitBtn = document.getElementById('submit-btn');
 submitBtn.addEventListener('click', () => {
-  alert('You submitted a registration form');
+  
 });
+
+const registrationForm = document.querySelector('#registration-form');
+
+registrationForm.onsubmit = (e) => {
+  e.preventDefault();
+    alert('You submitted a registration form');
+}
