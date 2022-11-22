@@ -14,7 +14,7 @@ function alphaOnly(event) {
 }
 
 const submitBtn = document.getElementById('submit-btn');
-submitBtn.addEventListener('click', () => {
+{
   
 });
 
